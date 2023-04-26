@@ -1,18 +1,19 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-import './App.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import LandingPage from "./pages/LandingPage";
-import UseStatePage from "./pages/UseStatePage";
+import UseStagePage from "./pages/UseStatePage";
+import UseEffectPage from './pages/UseEffectPage';
 
 function App() {
   return (
-    <div>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/usestate" element={<UseStatePage />} />
-            </Routes>
-        </BrowserRouter>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='use-state' element={<UseStagePage />} />
+          <Route path='use-effect' element={<UseEffectPage />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
